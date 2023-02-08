@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.6b1b6edd.css",
-    "main.js": "/react-gh-pages/static/js/main.4da01b8a.js",
-    "static/media/sunset.jpg": "/react-gh-pages/static/media/sunset.ab19eb6fc568e5c0ff4d.jpg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.6b1b6edd.css.map": "/react-gh-pages/static/css/main.6b1b6edd.css.map",
-    "main.4da01b8a.js.map": "/react-gh-pages/static/js/main.4da01b8a.js.map"
+    "main.css": "/search-weather-app/static/css/main.e0fa436b.css",
+    "main.js": "/search-weather-app/static/js/main.4da01b8a.js",
+    "static/media/sunset.jpg": "/search-weather-app/static/media/sunset.ab19eb6fc568e5c0ff4d.jpg",
+    "index.html": "/search-weather-app/index.html",
+    "main.e0fa436b.css.map": "/search-weather-app/static/css/main.e0fa436b.css.map",
+    "main.4da01b8a.js.map": "/search-weather-app/static/js/main.4da01b8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b1b6edd.css",
+    "static/css/main.e0fa436b.css",
     "static/js/main.4da01b8a.js"
   ]
 }
