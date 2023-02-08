@@ -21,5 +21,4 @@ Api source:
 - https://openweathermap.org/api
 
 # Preview
-## Screenshots
 ![Example screenshot](./img/screenshot.png)
