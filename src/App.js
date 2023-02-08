@@ -10,13 +10,15 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [forecast, setForecast] = useState([]);
+  const [errorMsg, setErrorMsg] = useState("");
   const handleSubmit = async (term) => {
     setLoading(true);
-    const searchResult = await searchString(term);
+    const searchResult = await searchString(term).catch((err) => {
+      setLoading(false);
+      setErrorMsg(err);
+    });
     const searchResultForecast = await searchForecas(term);
 
-    console.log(searchResult.data);
-    console.log(searchResultForecast.data);
     setLoading(false);
     setWeather(searchResult.data);
     setForecast(searchResultForecast.data);
@@ -26,12 +28,17 @@ function App() {
   return (
     <div className="app">
       <SearchForm onSubmit={handleSubmit} />
-      <Card
-        weather={weather}
-        loadingData={loading}
-        showData={show}
-        forecast={forecast}
-      />
+      {errorMsg && (
+        <div className="container">{`${errorMsg.response.data.message}`}</div>
+      )}
+      {weather && (
+        <Card
+          weather={weather}
+          loadingData={loading}
+          showData={show}
+          forecast={forecast}
+        />
+      )}
     </div>
   );
 }
