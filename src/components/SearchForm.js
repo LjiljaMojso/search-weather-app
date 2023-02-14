@@ -6,6 +6,7 @@ const SearchForm = ({ onSubmit }) => {
         e.preventDefault();
 
         if (term === '' || !term) return;
+        term.replace(/\s+/g, ' ');
         onSubmit(term);
         setTerm('');
     };
@@ -17,7 +18,7 @@ const SearchForm = ({ onSubmit }) => {
                         type="text"
                         className="form-control"
                         placeholder="Search city"
-                        onChange={e => setTerm(e.target.value.trim())}
+                        onChange={e => setTerm(e.target.value)}
                         value={term}
                     />
                 </div>
